@@ -1,0 +1,95 @@
+/* Css for the whole page */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* page background */
+.containor{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #5f0836);
+    padding: 50px;
+}
+
+/* css for the header section */
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 20px 40px 60px;
+    border-radius: 10px;
+}
+
+/* css for h2 */
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* fixing the ToDoList icon's postion */
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* css for the add task bar */
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* the css for the text-field in the task bar */
+input{
+    flex: 1;  /* so it can take the full width */
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+/* css for the add button in the task bar */
+button{
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    background-color:#2CA02C ;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* the css for the task list */
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 20px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* to make my list responsive to all devices */
+@media screen and (max-width: 600px){
+    button{
+        width: 20px;
+        text-align: center;
+        position: relative;
+        right: 60px;
+    }
+    ul li{
+        padding: 12px 8px 12px 15px;  
+    }
+}
