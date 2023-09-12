@@ -1,0 +1,153 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #141C23;
+    min-height: 8vh;
+    width: 100%; 
+}
+
+#mainlogo{
+    color:#fff ;
+    font-size: 20px;
+    line-height: 20px;
+    float: left;
+    margin-left: 10px ;
+    padding: 7px 100px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li{
+    list-style: none; /* to remove the dotes */
+}
+
+.nav-links a{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none; /* to remove the link line */
+    color: #9B9D9E;
+    font-size: 14px;
+    letter-spacing: 3ox;
+    /* padding: 7px 13px;
+    border-radius: 1px; */
+}
+
+/* making the nav bar mobile freindly */
+.mobile{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile div{
+    width: 25px;
+    height: 3px;
+    background-color: #9B9D9E;
+    margin: 5px;
+}
+
+/* for ipads */
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+/* for phones */
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: #141C23;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* to not make the menue apear unless summoned we use transfor and in the body overflow*/
+        transform: translateX(100%); 
+        transition: 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .mobile{
+        display: block;
+    }
+}
+
+.nav-action{
+    transform: translateX(0%);
+}
+
+/* to make an animation when clicking the menue */
+@-webkit-keyframes slide-in {
+    from {
+      opacity: 0;
+      -webkit-transform: translatex(50px);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translatex(0px);
+    }
+}
+  
+@keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translatex(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translatex(0px);
+    }
+}
+  
+.mobile {
+    -webkit-animation: slide-in 1s ease-out;
+    animation: slide-in 1s ease-out;
+}
+  
+/* login page */
+.containor{
+    max-width: 440px;
+    margin: 170pc auto;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 0 20px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;   
+}
+
+h2{
+    text-align: center;
+}
+
+.text-field .field{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 8px 15px;
+    background-color: #fff;
+    border-radius: 4px;
+    border-color: #eee;
+}
+
+.button{
+    width: 40%;
+    margin: auto;
+    background: #198754;
+    color: #fff;
+    border: 0;
+    padding: 8px 60px;
+    border-radius: 2px;
+    margin-right: 50px;
+}
